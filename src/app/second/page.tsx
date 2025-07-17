@@ -1,5 +1,18 @@
 "use client";
 import { Footer } from "@/components/footer";
+import {
+  BadgePercent,
+  ClipboardCheck,
+  DollarSign,
+  Lightbulb,
+  TrendingUp,
+} from "lucide-react";
+import {
+  HandArrowDownIcon,
+  HeadCircuitIcon,
+  StorefrontIcon,
+  TargetIcon,
+} from "@phosphor-icons/react";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
@@ -57,12 +70,17 @@ export default function LeiDoBem() {
         </script>
       </Head>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-white">
         {/* Header */}
         <header className="bg-white shadow-sm">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <div className="flex items-center space-x-2">
-              <Image src="/logo-azul.svg" width={100} height={100} alt="Logo azul" />
+              <Image
+                src="/logo-azul.svg"
+                width={100}
+                height={100}
+                alt="Logo azul"
+              />
             </div>
             <nav className="hidden md:flex space-x-6">
               <a href="#sobre" className="text-gray-600 hover:text-blue-600">
@@ -88,14 +106,14 @@ export default function LeiDoBem() {
               <div className="md:w-1/2 mb-8 md:mb-0">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
                   Transforme{" "}
-                  <strong className="text-yellow-400">Inovação</strong> em
+                  <strong className="text-app-yellow">Inovação</strong> em
                   Economia Fiscal
                 </h1>
                 <p className="text-xl mb-8 opacity-90">
                   Descubra como mais de 1.200 empresas reduziram seus impostos
                   com nossa consultoria especializada.
                 </p>
-                <button className="bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition-colors">
+                <button className="bg-app-yellow text-black px-16 py-3 rounded-full font-semibold hover:bg-app-yellow/85 transition-colors">
                   Saiba mais
                 </button>
               </div>
@@ -103,8 +121,153 @@ export default function LeiDoBem() {
           </div>
         </section>
 
-        <section>
-          <h2>O que é lei do bem ?</h2>
+        <section className="p-8 md:p-16 space-y-4 bg-[#f7f7f7] font-montserrat">
+          <h2 className="text-app-blue font-poppins font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+            O que é lei do bem ?
+          </h2>
+          <p>
+            A Lei do Bem é o principal instrumento de estímulo às atividades de
+            Pesquisa, Desenvolvimento e Inovação Tecnológica (PD&I) no Brasil.
+            Ela permite que empresas que investem em inovação recuperem parte
+            significativa desse investimento através de incentivos fiscais, como
+            a dedução no IRPJ e CSLL.
+          </p>
+          <p>
+            Com nossa assessoria, sua empresa pode navegar com segurança pelo
+            processo e maximizar os benefícios, transformando seus projetos
+            inovadores em uma poderosa vantagem competitiva e financeira.
+          </p>
+        </section>
+
+        <section className="p-8 md:p-16 space-y-4 font-montserrat">
+          <h2 className="text-app-blue font-poppins font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+            Por que fechar com assesoria do bem ?
+          </h2>
+          <p className="md:w-md">
+            Somos especialistas em transformar seus investimentos em inovação em
+            economia fiscal real
+          </p>
+          <div className="w-full items-center justify-items-center grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <span className="flex items-center justify-between w-xs lg:w-md lg:py-3 font-montserrat font-semibold md:text-lg lg:text-xl bg-[#3245C7] border-3 border-[#0113A3] text-white py-2 px-4 rounded-md">
+              Lucros maiores{" "}
+              <TrendingUp className="text-app-yellow size-9 lg:size-12" />
+            </span>
+            <span className="flex items-center justify-between w-xs lg:w-md lg:py-3 font-montserrat font-semibold md:text-lg lg:text-xl bg-[#3245C7] border-3 border-[#0113A3] text-white py-2 px-4 rounded-md">
+              Posicionamento{" "}
+              <StorefrontIcon className="text-app-yellow size-9 lg:size-12" />
+            </span>
+            <span className="flex items-center justify-between w-xs lg:w-md lg:py-3 font-montserrat font-semibold md:text-lg lg:text-xl bg-[#3245C7] border-3 border-[#0113A3] text-white py-2 px-4 rounded-md">
+              Atingir objetivos{" "}
+              <TargetIcon className="text-app-yellow size-9 lg:size-12" />
+            </span>
+            <span className="flex items-center justify-between w-xs lg:w-md lg:py-3 font-montserrat font-semibold md:text-lg lg:text-xl bg-[#3245C7] border-3 border-[#0113A3] text-white py-2 px-4 rounded-md">
+              Reinvestimento{" "}
+              <DollarSign className="text-app-yellow size-9 lg:size-12" />
+            </span>
+            <span className="flex items-center justify-between w-xs lg:w-md lg:py-3 font-montserrat font-semibold md:text-lg lg:text-xl bg-[#3245C7] border-3 border-[#0113A3] text-white py-2 px-4 rounded-md">
+              Promove inovação{" "}
+              <HeadCircuitIcon className="text-app-yellow size-9 lg:size-12" />
+            </span>
+            <span className="flex items-center justify-between w-xs lg:w-md lg:py-3 font-montserrat font-semibold md:text-lg lg:text-xl bg-[#3245C7] border-3 border-[#0113A3] text-white py-2 px-4 rounded-md">
+              Redução de imposto{" "}
+              <HandArrowDownIcon className="text-app-yellow size-9 lg:size-12" />
+            </span>
+          </div>
+        </section>
+
+        <section className="p-8 md:p-16 space-y-4 font-montserrat">
+          <h2 className="font-poppins font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+            Empresa que optaram a lei do bem
+          </h2>
+          <div className="w-[100vdh] -mx-8 md:-mx-16 bg-[#121212] flex items-center flex-wrap md:justify-center overflow-hidden gap-4 p-4">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <Image
+                src={`/empresa-${index + 1}.png`}
+                alt="Empresa que optou pela Lei do Bem"
+                width={150}
+                height={50}
+                key={index}
+                className="h-16 md:h-20 object-contain"
+              />
+            ))}
+          </div>
+        </section>
+
+        <section className="p-8 md:p-16 space-y-4 font-montserrat -my-8">
+          <h2 className="text-app-blue font-poppins font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+            Como funciona nosso processo?
+          </h2>
+          <p className="md:w-md">
+            Simplificamos a complexidade da Lei do Bem em um processo claro e
+            eficiente de 3 etapas.
+          </p>
+
+          <div className="-mx-4">
+            <div className="flex items-start gap-4 relative">
+              <div className="rounded-full border-2 border-gray-300 bg-white z-10 md:size-16 flex items-center justify-center p-2">
+                <Lightbulb
+                  className="text-app-blue size-9 lg:size-12"
+                  strokeWidth={1.5}
+                />
+              </div>
+              <span className="mt-4">
+                <h3 className="font-poppins font-bold text-xl">
+                  Análise e Diagnóstico
+                </h3>
+                <p className="md:w-md">
+                  Analisamos seus projetos e despesas para identificar todas as
+                  atividades elegíveis para os benefícios fiscais da Lei do Bem.
+                </p>
+              </span>
+              <div className="absolute left-7 top-12 w-0.5 h-28 xl:h-28 md:left-8 bg-gray-300"></div>
+            </div>
+            <div className="flex items-start gap-4 relative">
+              <div className="rounded-full border-2 border-gray-300 bg-white z-10 md:size-16 flex items-center justify-center p-2">
+                <ClipboardCheck
+                  className="text-app-blue size-9 lg:size-12"
+                  strokeWidth={1.5}
+                />
+              </div>
+              <span className="mt-4">
+                <h3 className="font-poppins font-bold text-xl">
+                  Elaboração do Projeto
+                </h3>
+                <p className="md:w-md">
+                  Preparamos toda a documentação técnica e contábil necessária,
+                  garantindo conformidade total com as exigências legais.
+                </p>
+              </span>
+              <div className="absolute left-7 top-12 w-0.5 h-32 xl:h-28 md:left-8 bg-gray-300"></div>
+            </div>
+            <div className="flex items-start gap-4 relative">
+              <div className="rounded-full border-2 border-gray-300 bg-white z-10 md:size-16 flex items-center justify-center p-2">
+                <BadgePercent
+                  className="text-app-blue size-9 lg:size-12"
+                  strokeWidth={1.5}
+                />
+              </div>
+              <span className="mt-4">
+                <h3 className="font-poppins font-bold text-xl">
+                  Aplicação e Resultados
+                </h3>
+                <p className="md:w-md">
+                  Submetemos o processo e acompanhamos até a aprovação,
+                  garantindo a maximização do seu retorno fiscal com total
+                  segurança.
+                </p>
+              </span>
+              <div className="absolute left-7 top-12 bottom-[-4rem] md:bottom-[-6rem] lg:bottom-[-6.2rem] w-0.5 md:left-8 bg-gray-300"></div>
+            </div>
+          </div>
+        </section>
+        <section className="cta-container h-[30rem] mt-16 z-10 flex flex-col items-center justify-center space-y-4">
+          <h2 className="text-white font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl  md:w-[60%] text-center">
+            <strong className="text-app-yellow">Valorize</strong> sua empresa
+            pagando menos imposto
+          </h2>
+          <button className="rounded-full bg-app-blue py-2 px-8 md:py-3 md:px-16 font-montserrat font-medium text-white tex-tlg">
+            Valorizar agora
+          </button>
         </section>
 
         {/* Footer */}
