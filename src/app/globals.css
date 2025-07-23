@@ -5,6 +5,23 @@
   --foreground: #171717;
   --app-blue: #0113a3;
   --app-yellow: #fdfc0e;
+
+  --app-blue-light: #3c4dff; /* Lighter variation */
+  --app-yellow-soft: #fdfc9e; /* Softer version */
+  --app-neutral: #f3f4f6; /* Light gray background */
+  --app-muted: #9ca3af; /* Muted gray */
+  --app-accent: #00b894; /* Green accent (success) */
+  --app-error: #e63946; /* Red (error) */
+  --app-info: #38bdf8; /* Light blue (info) */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --app-neutral: #1e1e1e;
+    --app-muted: #a1a1aa;
+  }
 }
 
 @theme inline {
@@ -12,15 +29,22 @@
   --color-foreground: var(--foreground);
   --color-app-blue: var(--app-blue);
   --color-app-yellow: var(--app-yellow);
+  --color-app-blue-light: var(--app-blue-light);
+  --color-app-yellow-soft: var(--app-yellow-soft);
+  --color-app-neutral: var(--app-neutral);
+  --color-app-muted: var(--app-muted);
+  --color-app-accent: var(--app-accent);
+  --color-app-error: var(--app-error);
+  --color-app-info: var(--app-info);
+
   --font-montserrat: var(--font-montserrat);
   --font-poppins: var(--font-poppins);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .hero {
@@ -35,4 +59,14 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@keyframes scroll {
+  to {
+    translate: calc(-6 * 15rem);
+  }
+}
+
+.scroll-animate {
+  animation: scroll 10s linear infinite;
 }

@@ -83,17 +83,17 @@ export default function LeiDoBem() {
               />
             </div>
             <nav className="hidden md:flex space-x-6">
-              <a href="#sobre" className="text-gray-600 hover:text-blue-600">
+              <a href="#sobre" className="text-gray-600 hover:text-app-blue">
                 Sobre
               </a>
-              <a href="#servicos" className="text-gray-600 hover:text-blue-600">
+              <a href="#servicos" className="text-gray-600 hover:text-app-blue">
                 Serviços
               </a>
-              <a href="#contato" className="text-gray-600 hover:text-blue-600">
+              <a href="#contato" className="text-gray-600 hover:text-app-blue">
                 Contato
               </a>
             </nav>
-            <button className="bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500">
+            <button className="bg-app-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-app-blue/85">
               Fale Conosco
             </button>
           </div>
@@ -179,17 +179,19 @@ export default function LeiDoBem() {
           <h2 className="font-poppins font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
             Empresa que optaram a lei do bem
           </h2>
-          <div className="w-[100vdh] -mx-8 md:-mx-16 bg-[#121212] flex items-center flex-wrap md:justify-center overflow-hidden gap-4 p-4">
-            {Array.from({ length: 6 }).map((_, index) => (
-              <Image
-                src={`/empresa-${index + 1}.png`}
-                alt="Empresa que optou pela Lei do Bem"
-                width={150}
-                height={50}
-                key={index}
-                className="h-16 md:h-20 object-contain"
-              />
-            ))}
+          <div className="overflow-hidden -mx-8 md:-mx-16 w-[100vdh] bg-[#121212] py-4">
+            <div className=" grid grid-flow-col auto-cols-[15rem] justify-items-stretch scroll-animate">
+              {Array.from({ length: 12 }).map((_, index) => (
+                <Image
+                  src={`/empresa-${(index % 6) + 1}.png`}
+                  alt="Empresa que optou pela Lei do Bem"
+                  width={150}
+                  height={30}
+                  key={index}
+                  className="h-16 md:h-20 lg:h-26 object-contain"
+                />
+              ))}
+            </div>
           </div>
         </section>
 
@@ -260,6 +262,7 @@ export default function LeiDoBem() {
             </div>
           </div>
         </section>
+
         <section className="cta-container h-[30rem] mt-16 z-10 flex flex-col items-center justify-center space-y-4">
           <h2 className="text-white font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl  md:w-[60%] text-center">
             <strong className="text-app-yellow">Valorize</strong> sua empresa
@@ -268,6 +271,61 @@ export default function LeiDoBem() {
           <button className="rounded-full bg-app-blue py-2 px-8 md:py-3 md:px-16 font-montserrat font-medium text-white tex-tlg">
             Valorizar agora
           </button>
+        </section>
+
+        <section className="p-8 md:p-16 space-y-4 font-montserrat flex flex-col md:flex-row my-4">
+          <span className="space-y-4 md:w-2/3">
+            <h2 className="text-app-blue font-poppins font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+              Pronto para economizar ?
+            </h2>
+            <p>
+              Preencha o formulário e nossa equipe de especialistas fará uma
+              pré-análise gratuita do potencial de incentivo fiscal para sua
+              empresa. É rápido, confidencial e sem compromisso.
+            </p>
+            <p className="border-l-4 border-app-blue pl-2 py-1">
+              "Sua empresa investe em inovação? <br />
+              Você pode estar pagando imposto a mais."
+            </p>
+          </span>
+          <div className="border-2 border-gray-300 rounded-lg p-4 md:flex-1">
+            <form className="flex flex-col space-y-2">
+              <label className="font-poppins font-medium">Nome completo</label>
+              <input
+                type="text"
+                className="border-2 border-gray-300 rounded-md outline-none px-2 py-1"
+              />
+
+              <label className="font-poppins font-medium">
+                Email corporativo
+              </label>
+              <input
+                type="email"
+                className="border-2 border-gray-300 rounded-md outline-none px-2 py-1"
+              />
+
+              <label className="font-poppins font-medium">Empresa</label>
+              <input
+                type="text"
+                className="border-2 border-gray-300 rounded-md outline-none px-2 py-1"
+              />
+
+              <label className="font-poppins font-medium">
+                Margem faturamento anual
+              </label>
+              <input
+                type="number"
+                className="border-2 border-gray-300 rounded-md outline-none px-2 py-1"
+              />
+
+              <button
+                type="submit"
+                className="bg-app-blue text-white py-2 rounded-md"
+              >
+                Quero pagar menos imposto
+              </button>
+            </form>
+          </div>
         </section>
 
         {/* Footer */}
