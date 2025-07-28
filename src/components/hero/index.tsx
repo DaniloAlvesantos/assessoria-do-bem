@@ -12,7 +12,7 @@ export const Hero = () => {
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-app-blue to-app-blue-light">
                 Inovação em
               </span>
-              <span className="block text-[#fcfc54]">Economia Fiscal</span>
+              <span className="block text-app-yellow text-shadow-lg/5">Economia Fiscal</span>
             </h1>
 
             <p className="text-xl text-gray-600 mb-8 max-w-2xl">

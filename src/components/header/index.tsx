@@ -50,7 +50,7 @@ export const Header = () => {
           <div className="flex items-center">
             <a
               href="#contato"
-              className="bg-blue-600 text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-blue-700 transition-colors"
+              className="bg-app-blue text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-app-blue-light transition-colors"
             >
               Análise Gratuita
             </a>

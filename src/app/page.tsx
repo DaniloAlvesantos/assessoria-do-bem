@@ -11,6 +11,7 @@ import { Testimonials } from "@/components/testimonials";
 import { Clients } from "@/components/clients";
 import { FAQ } from "@/components/FAQ";
 import { ContactForm } from "@/components/form";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
       <ContactForm />
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-gradient-to-b from-[#000E8C] to-[#000A75]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -40,19 +41,21 @@ export default function Home() {
               real.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <Link
                 href="#contato"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all"
+                className="bg-gradient-to-r from-app-blue to-app-blue-light text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-app-blue/80 hover:to-app-blue-light/80 transition-all"
               >
                 Fazer Análise Gratuita
-              </a>
-              <a
-                href="tel:+5511999998888"
-                className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all flex items-center justify-center"
+              </Link>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://api.whatsapp.com/send?phone=5511992473916&text=Ol%C3%A1%20Anderson,%20tudo%20bem?%20Venho%20atrav%C3%A9s%20do%20site%20da%20*AdB!*"
+                className="bg-app-yellow text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-app-yellow-soft transition-all flex items-center justify-center"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                (11) 99999-8888
-              </a>
+                +55 (11) 99247-3916
+              </Link>
             </div>
           </div>
         </div>

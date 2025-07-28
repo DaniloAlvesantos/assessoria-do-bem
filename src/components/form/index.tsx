@@ -29,7 +29,7 @@ export const ContactForm = () => {
   return (
     <section
       id="contato"
-      className="py-20 bg-gradient-to-br from-blue-600 to-purple-600"
+      className="py-20 bg-gradient-to-br from-[#D9D80A] to-app-blue"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -153,7 +153,7 @@ export const ContactForm = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
+                className="bg-gradient-to-r from-app-blue to-app-blue-light text-white px-12 py-4 rounded-lg text-lg font-semibold hover:from-app-blue/90 hover:to-app-blue-light/90 transition-all transform hover:scale-105 shadow-lg"
               >
                 Quero Pagar Menos Impostos
               </button>

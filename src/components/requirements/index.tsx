@@ -59,7 +59,7 @@ export const Requirements = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-app-blue to-app-blue-light rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Não se preocupe, vamos fazer isso juntos!
             </h3>

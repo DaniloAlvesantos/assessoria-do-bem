@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-[#000A75] text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
@@ -16,12 +16,12 @@ export const Footer = () => {
                 alt="Logo branca"
               />
             </div>
-            <p className="text-gray-400 mb-6 max-w-md">
+            <p className="text-gray-200 mb-6 max-w-md">
               Especialistas em transformar inovação em economia fiscal para
               empresas brasileiras
             </p>
             <div className="flex space-x-4">
-              <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 cursor-pointer">
+              <div className="w-10 h-10 bg-app-blue-light rounded-full flex items-center justify-center hover:bg-app-blue-light/80 cursor-pointer">
                 <Link
                   href="https://assessoriadobem.com.br/"
                   target="_blank"
@@ -30,7 +30,7 @@ export const Footer = () => {
                   <Globe className="w-5 h-5" />
                 </Link>
               </div>
-              <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 cursor-pointer">
+              <div className="w-10 h-10 bg-app-blue-light rounded-full flex items-center justify-center hover:bg-app-blue-light/80 cursor-pointer">
                 <Link
                   href="mailto:a.manduca@assessoriadobem.com.br"
                   target="_blank"
@@ -39,8 +39,14 @@ export const Footer = () => {
                   <Mail className="w-5 h-5" />
                 </Link>
               </div>
-              <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 cursor-pointer">
-                <Phone className="w-5 h-5" />
+              <div className="w-10 h-10 bg-app-blue-light rounded-full flex items-center justify-center hover:bg-app-blue-light/80 cursor-pointer">
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://api.whatsapp.com/send?phone=5511992473916&text=Ol%C3%A1%20Anderson,%20tudo%20bem?%20Venho%20atrav%C3%A9s%20do%20site%20da%20*AdB!*"
+                >
+                  <Phone className="w-5 h-5" />
+                </Link>
               </div>
             </div>
           </div>
@@ -49,36 +55,36 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Navegação</h3>
             <ul className="space-y-2">
               <li>
-                <a
+                <Link
                   href="#como-funciona"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-200 hover:text-white transition-colors"
                 >
                   Como Funciona
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#beneficios"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-200 hover:text-white transition-colors"
                 >
                   Benefícios
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#depoimentos"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-200 hover:text-white transition-colors"
                 >
                   Depoimentos
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#contato"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-200 hover:text-white transition-colors"
                 >
                   Contato
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -87,25 +93,25 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contato</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-400">
-                  contato@assessoriadobem.com.br
+                <Mail className="w-5 h-5 text-gray-200" />
+                <span className="text-gray-200 text-sm">
+                  a.manduca@assessoriadobem.com.br
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-400">+55 (11) 99999-8888</span>
+                <Phone className="w-5 h-5 text-gray-200" />
+                <span className="text-gray-200">+55 (11) 99247-3916</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-400">São Paulo, SP - Brasil</span>
+                <MapPin className="w-5 h-5 text-gray-200" />
+                <span className="text-gray-200">São Paulo, SP - Brasil</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-gray-400">
+          <p className="text-gray-200">
             © 2025 Assessoria do Bem. Todos os direitos reservados. Desenvolvido
             com tecnologia e inovação.
           </p>
