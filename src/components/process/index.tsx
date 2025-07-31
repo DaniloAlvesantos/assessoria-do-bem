@@ -24,7 +24,7 @@ export const Process = () => {
       icon: <Trophy className="w-8 h-8 text-purple-600" />,
     },
   ];
-  
+
   return (
     <section id="como-funciona" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,7 +39,7 @@ export const Process = () => {
         </div>
 
         <div className="relative">
-          <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-green-600 to-purple-600 transform -translate-y-1/2 hidden lg:block"></div>
+          <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-app-blue to-app-yellow transform -translate-y-1/2 hidden lg:block"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {processSteps.map((step, index) => (
@@ -48,10 +48,12 @@ export const Process = () => {
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-app-blue to-app-blue-light rounded-full text-white text-2xl font-bold mb-6 mx-auto">
                     {step.number}
                   </div>
-                  <div className="text-center mb-6">{step.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
-                    {step.title}
-                  </h3>
+                  <div className="text-center mb-6 flex items-center justify-center gap-2">
+                    {step.icon}
+                    <h3 className="text-xl font-semibold text-gray-900 text-center">
+                      {step.title}
+                    </h3>
+                  </div>
                   <p className="text-gray-600 text-center">
                     {step.description}
                   </p>

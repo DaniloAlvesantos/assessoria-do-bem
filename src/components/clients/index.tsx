@@ -9,8 +9,8 @@ export const Clients = () => {
             Empresas que confiam em nosso trabalho
           </h2>
         </div>
-        <div className="overflow-hidden -mx-8 md:-mx-16 w-[100vdh] py-4">
-          <div className=" grid grid-flow-col auto-cols-[15rem] justify-items-stretch scroll-animate">
+        <div className="overflow-hidden -mx-8 md:-mx-16 w-full py-4">
+          <div className="grid grid-flow-col auto-cols-[10rem] md:auto-cols-[15rem] justify-items-stretch scroll-animate-mobile scroll-animate">
             {Array.from({ length: 12 }).map((_, index) => (
               <Image
                 src={`/empresa-${(index % 6) + 1}.png`}

@@ -54,7 +54,7 @@ export const About = () => {
           <div className="space-y-6">
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                <div className="size-12 aspect-square bg-blue-100 rounded-full flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
@@ -70,7 +70,7 @@ export const About = () => {
 
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                <div className="size-12 aspect-square bg-green-100 rounded-full flex items-center justify-center">
                   <DollarSign className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
@@ -86,7 +86,7 @@ export const About = () => {
 
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                <div className="size-12 aspect-square bg-purple-100 rounded-full flex items-center justify-center">
                   <Zap className="w-6 h-6 text-purple-600" />
                 </div>
                 <div>

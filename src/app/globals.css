@@ -70,6 +70,16 @@ body {
   }
 }
 
+@keyframes scroll-mobile {
+  to {
+    translate: calc(-6 * 10rem);
+  }
+}
+
+.scroll-animate-mobile {
+  animation: scroll-mobile 10s linear infinite;
+}
+
 .scroll-animate {
   animation: scroll 10s linear infinite;
 }

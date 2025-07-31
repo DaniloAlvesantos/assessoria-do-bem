@@ -14,7 +14,7 @@ export const Header = () => {
                 alt="Logo azul"
               />
 
-              <span className="text-lg sm:text-xl font-bold text-gray-900 font-montserrat">
+              <span className="hidden sm:block text-lg sm:text-xl font-bold text-gray-900 font-montserrat">
                 Assessoria do Bem
               </span>
             </div>

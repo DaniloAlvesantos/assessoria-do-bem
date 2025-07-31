@@ -46,13 +46,13 @@ export const Requirements = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {requirements.map((requirement, index) => (
-            <div key={index} className="text-center">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 mb-6">
+            <div key={index} className="text-center transition-transform hover:scale-105">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 mb-6 flex items-center gap-2 justify-center">
                 {requirement.icon}
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {requirement.title}
+                </h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {requirement.title}
-              </h3>
               <p className="text-gray-600">{requirement.description}</p>
             </div>
           ))}
