@@ -1,4 +1,7 @@
 import { useState } from "react";
+import InputMask from "@mona-health/react-input-mask";
+import axios from "axios";
+import { toast, Toaster } from "sonner";
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -7,13 +10,25 @@ export const ContactForm = () => {
     company: "",
     revenue: "",
     message: "",
+    telefone: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    alert("Formulário enviado! Nossa equipe entrará em contato em breve.");
+
+    if (Object.entries(formData).some((field) => field[1].trim().length < 0)) {
+      console.error("Valor nulo");
+    }
+    
+    const res = axios.post("/api/send-email", formData);
+    toast.promise(res, {
+      loading:"Enviando...",
+      success: {
+        message: "Email enviado com sucesso!",
+        description: "Aguarde nossa equipe entrar em contato."
+      },
+      error: "Oops! Algo deu errado."
+    })
   };
 
   const handleChange = (
@@ -102,6 +117,7 @@ export const ContactForm = () => {
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Nome da sua empresa"
+                  minLength={6}
                 />
               </div>
 
@@ -134,10 +150,33 @@ export const ContactForm = () => {
 
             <div>
               <label
+                htmlFor="telefone"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Telefone *
+              </label>
+              <InputMask
+                mask="(99) 99999-9999"
+                value={formData.telefone}
+                onChange={handleChange}
+              >
+                <input
+                  type="text"
+                  id="telefone"
+                  name="telefone"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="(19) 99999-9999"
+                  required
+                />
+              </InputMask>
+            </div>
+
+            <div>
+              <label
                 htmlFor="message"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Conte-nos sobre seus projetos de inovação
+                Conte-nos sobre sua empresa *
               </label>
               <textarea
                 id="message"
@@ -146,7 +185,9 @@ export const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Descreva brevemente suas atividades de P&D, softwares desenvolvidos, melhorias em processos, etc."
+                placeholder="Descreva brevemente sobre ganhos, cargas tributarias, quantidade de funcionarios, etc."
+                required
+                minLength={50}
               ></textarea>
             </div>
 
@@ -160,6 +201,7 @@ export const ContactForm = () => {
               <p className="text-sm text-gray-500 mt-4">
                 Análise gratuita • Sem compromisso • 100% confidencial
               </p>
+              <Toaster />
             </div>
           </form>
         </div>

@@ -100,7 +100,7 @@ export const Hero = () => {
                 <div className="text-sm text-gray-600">Economia Gerada</div>
               </motion.div>
               <motion.div variants={statChild} className="text-center">
-                <div className="text-3xl font-bold text-app-info">98%</div>
+                <div className="text-3xl font-bold text-app-info">100%</div>
                 <div className="text-sm text-gray-600">Taxa de Aprovação</div>
               </motion.div>
             </motion.div>
