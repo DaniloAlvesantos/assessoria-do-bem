@@ -58,7 +58,7 @@ export const Hero = () => {
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-app-blue to-app-blue-light">
                 Inovação em
               </span>
-              <span className="block text-[#e7e714] lg:text-app-yellow">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-app-blue-light to-app-blue">
                 Economia Fiscal
               </span>
             </motion.h1>
@@ -72,13 +72,13 @@ export const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="#contato"
-                className="bg-gradient-to-r from-app-blue to-[#3c4dff] text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg"
+                className="bg-gradient-to-r from-app-blue to-[#3c4dff] text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 hover:scale-105 hover:from-app-blue-light shadow-lg"
               >
                 Quero Pagar Menos Impostos
               </a>
               <a
                 href="#como-funciona"
-                className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition-all shadow-lg border border-gray-200"
+                className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg border border-gray-200"
               >
                 Saber Mais
               </a>

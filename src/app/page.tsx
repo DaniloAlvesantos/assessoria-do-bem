@@ -32,13 +32,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold text-white mb-6">
-              "Sua empresa investe em inovação? Você pode estar pagando imposto
-              a mais."
+              "Não deixe dinheiro na mesa"
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Não deixe dinheiro na mesa. Descubra hoje mesmo como a Lei do Bem
-              pode transformar seus investimentos em inovação em economia fiscal
-              real.
+              Seja mais competitivo no mercado
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

@@ -12,27 +12,27 @@ export const FAQ = () => {
     {
       question: "Qualquer empresa que inova pode usar a Lei do Bem?",
       answer:
-        "Não. A empresa precisa estar no regime de Lucro Real, ter regularidade fiscal, lucro fiscal no ano-base e realizar investimentos em PD&I. Nossa análise gratuita verifica se sua empresa atende aos requisitos.",
+        "Sim, desde que a empresa esteja no regime de lucro real, com regularidade fiscal e lucro fiscal no ano base de aproveitamento. Se sua empresa investe em pesquisa, desenvolvimento ou inovação tecnológica, mesmo para melhorias de produtos, processos ou serviços, ela pode se beneficiar.",
     },
     {
       question: "O processo é muito burocrático?",
       answer:
-        "Sim, o processo possui muitas exigências técnicas e documentais. Por isso nossa assessoria é fundamental - cuidamos de toda a burocracia para você, garantindo conformidade total e maximizando seus benefícios.",
+        "Com a nossa consultoria, o processo fica simplificado. É muito importante a contratação de uma consultoria especializada, como a Assessoria do Bem, que vai te levar do ponto A ao ponto B, facilitando toda e qualquer complexidade.",
     },
     {
       question: "Quais despesas podem ser consideradas para o incentivo?",
       answer:
-        "Salários de pesquisadores, materiais de pesquisa, serviços de terceiros em PD&I, depreciação de equipamentos, patentes, software de desenvolvimento, entre outras despesas relacionadas à inovação tecnológica.",
+        "Salários (com encargos sociais e trabalhistas) de pessoas dedicadas à pesquisa, desenvolvimento ou inovação tecnológica; despesas com viagens nacionais e internacionais; materiais de consumo; protótipos; lotes pilotos; serviços de terceiros (empresas ou profissionais PJ); depreciação e amortização de equipamentos; patentes e softwares. Tanto despesas quanto dispêndios podem ser considerados para o aproveitamento dos incentivos fiscais.",
     },
     {
-      question: "Qual o benefício fiscal real que minha empresa pode ter?",
+      question: "Qual o benefício fiscal real que minha empresa pode obter?",
       answer:
-        "O benefício pode chegar a 60% dos gastos com PD&I através da dedução adicional no IRPJ e CSLL. O valor exato depende dos investimentos realizados. Faça nossa análise gratuita para descobrir seu potencial.",
+        "O benefício fiscal da Lei do Bem pode chegar até 34% de redução no imposto de renda e na contribuição social sobre o lucro líquido. Além disso, pode haver redução de até 50% no IPI para determinados equipamentos. O aproveitamento pode ser feito em tempo real, mês a mês ou anualmente, conforme a apuração fiscal da empresa.",
     },
     {
-      question: "Quanto tempo demora o processo?",
+      question: "Quanto tempo demora para obter o benefício?",
       answer:
-        "O processo completo, desde a análise inicial até a aprovação, pode levar de 3 a 6 meses. Acompanhamos todo o processo para garantir agilidade e eficiência.",
+        "O aproveitamento da Lei do Bem pode ser realizado em tempo real, no mês ou trimestre em que a empresa apresenta lucro fiscal, reduzindo imediatamente a carga tributária sobre investimentos em inovação. Não depende de aprovação judicial, e a estratégia pode ser ajustada conforme a necessidade da empresa.",
     },
   ];
 

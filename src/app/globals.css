@@ -66,20 +66,20 @@ body {
 
 @keyframes scroll {
   to {
-    translate: calc(-6 * 15rem);
+    translate: calc(-10 * 15rem);
   }
 }
 
 @keyframes scroll-mobile {
   to {
-    translate: calc(-6 * 10rem);
+    translate: calc(-10 * 10rem);
   }
 }
 
 .scroll-animate-mobile {
-  animation: scroll-mobile 10s linear infinite;
+  animation: scroll-mobile 18s linear infinite;
 }
 
 .scroll-animate {
-  animation: scroll 10s linear infinite;
+  animation: scroll 18s linear infinite;
 }
