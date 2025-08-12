@@ -5,7 +5,7 @@ export const About = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-poppins font-bold text-gray-900 mb-4">
             O que é a Lei do Bem?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -20,7 +20,7 @@ export const About = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-app-blue to-app-blue-light rounded-full flex items-center justify-center mb-6">
                 <Globe className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="font-poppins text-2xl font-bold text-gray-900 mb-4">
                 Lei nº 11.196/2005
               </h3>
               <p className="text-gray-600 mb-6">
@@ -58,7 +58,7 @@ export const About = () => {
                   <TrendingUp className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900">
+                  <h4 className="font-poppins text-lg font-semibold text-gray-900">
                     Estímulo à Inovação
                   </h4>
                   <p className="text-sm text-gray-600">
@@ -74,7 +74,7 @@ export const About = () => {
                   <DollarSign className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900">
+                  <h4 className="font-poppins text-lg font-semibold text-gray-900">
                     Benefícios Fiscais
                   </h4>
                   <p className="text-sm text-gray-600">
@@ -90,7 +90,7 @@ export const About = () => {
                   <Zap className="w-6 h-6 text-purple-600" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900">
+                  <h4 className="font-poppins text-lg font-semibold text-gray-900">
                     Competitividade
                   </h4>
                   <p className="text-sm text-gray-600">

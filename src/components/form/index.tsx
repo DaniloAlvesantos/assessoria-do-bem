@@ -48,10 +48,10 @@ export const ContactForm = () => {
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="font-poppins text-4xl font-bold text-white mb-4">
             Pronto para economizar?
           </h2>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl font-medium text-gray-100 max-w-2xl mx-auto">
             Preencha o formulário e nossa equipe de especialistas fará uma
             pré-análise gratuita do potencial de incentivo fiscal para sua
             empresa
@@ -64,7 +64,7 @@ export const ContactForm = () => {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 mb-2 font-poppins"
                 >
                   Nome Completo *
                 </label>
@@ -83,7 +83,7 @@ export const ContactForm = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 mb-2 font-poppins"
                 >
                   E-mail Corporativo *
                 </label>
@@ -104,7 +104,7 @@ export const ContactForm = () => {
               <div>
                 <label
                   htmlFor="company"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 mb-2 font-poppins"
                 >
                   Empresa *
                 </label>
@@ -124,7 +124,7 @@ export const ContactForm = () => {
               <div>
                 <label
                   htmlFor="revenue"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 mb-2 font-poppins"
                 >
                   Faturamento Anual (Estimado) *
                 </label>
@@ -134,7 +134,7 @@ export const ContactForm = () => {
                   required
                   value={formData.revenue}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="">Selecione uma faixa</option>
                   <option value="até 2,4 milhões">Até R$ 2,4 milhões</option>
@@ -151,7 +151,7 @@ export const ContactForm = () => {
             <div>
               <label
                 htmlFor="telefone"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-gray-700 mb-2 font-poppins"
               >
                 Telefone *
               </label>
@@ -174,7 +174,7 @@ export const ContactForm = () => {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-gray-700 mb-2 font-poppins"
               >
                 Conte-nos sobre sua empresa *
               </label>
@@ -194,11 +194,11 @@ export const ContactForm = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-gradient-to-r from-app-blue to-app-blue-light text-white px-12 py-4 rounded-lg text-lg font-semibold hover:from-app-blue/90 hover:to-app-blue-light/90 transition-all transform hover:scale-105 shadow-lg"
+                className="font-poppins bg-gradient-to-r from-app-blue to-app-blue-light text-white px-12 py-4 rounded-lg text-lg font-semibold hover:from-app-blue/90 hover:to-app-blue-light/90 transition-all transform hover:scale-105 shadow-lg"
               >
                 Quero Pagar Menos Impostos
               </button>
-              <p className="text-sm text-gray-500 mt-4">
+              <p className="text-sm font-medium text-gray-500 mt-4">
                 Análise gratuita • Sem compromisso • 100% confidencial
               </p>
               <Toaster />

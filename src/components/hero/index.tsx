@@ -52,7 +52,7 @@ export const Hero = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6"
+              className="font-poppins leading-18 text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4"
             >
               Transforme
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-app-blue to-app-blue-light">
@@ -63,7 +63,7 @@ export const Hero = () => {
               </span>
             </motion.h1>
 
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl">
+            <p className=" font-medium text-xl text-gray-600 mb-8 max-w-2xl">
               Sua empresa investe em inovação tecnológica? Descubra como a Lei
               do Bem pode gerar incríveis incentivos fiscais e reduzir seus
               impostos em até 60%.
@@ -72,13 +72,13 @@ export const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="#contato"
-                className="bg-gradient-to-r from-app-blue to-[#3c4dff] text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 hover:scale-105 hover:from-app-blue-light shadow-lg"
+                className="bg-gradient-to-r from-app-blue to-[#3c4dff] text-white px-8 py-4 rounded-lg text-lg font-poppins font-semibold transition duration-300 hover:scale-105 hover:from-app-blue-light shadow-lg"
               >
                 Quero Pagar Menos Impostos
               </a>
               <a
                 href="#como-funciona"
-                className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg border border-gray-200"
+                className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-poppins font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg border border-gray-200"
               >
                 Saber Mais
               </a>
@@ -89,7 +89,7 @@ export const Hero = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.6 }}
-              className="mt-12 flex items-center justify-center lg:justify-start space-x-8"
+              className="mt-12 flex items-center justify-center lg:justify-start space-x-8 "
             >
               <motion.div variants={statChild} className="text-center">
                 <div className="text-3xl font-bold text-app-blue">1500+</div>
@@ -100,7 +100,7 @@ export const Hero = () => {
                 <div className="text-sm text-gray-600">Economia Gerada</div>
               </motion.div>
               <motion.div variants={statChild} className="text-center">
-                <div className="text-3xl font-bold text-app-info">100%</div>
+                <div className="text-3xl font-bold text-emerald-500">100%</div>
                 <div className="text-sm text-gray-600">Taxa de Aprovação</div>
               </motion.div>
             </motion.div>
@@ -113,7 +113,7 @@ export const Hero = () => {
             viewport={{ once: true, amount: 0.5 }}
             className="relative"
           >
-            <div className="relative bg-white rounded-2xl shadow-2xl p-8 max-w-md mx-auto">
+            <div className="relative bg-white rounded-2xl shadow-2xl p-8 max-w-md mx-auto ">
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                 <Check className="w-5 h-5 text-white" />
               </div>
@@ -121,7 +121,7 @@ export const Hero = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-app-blue to-app-blue-light rounded-full flex items-center justify-center mx-auto mb-4">
                   <Calculator className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-2xl font-poppins font-bold text-gray-900 mb-2">
                   Análise Gratuita
                 </h3>
                 <p className="text-gray-600">

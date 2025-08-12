@@ -32,7 +32,7 @@ export const Benefits = () => {
     <section id="beneficios" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="font-poppins text-4xl font-bold text-gray-900 mb-4">
             Por que escolher a Assessoria do Bem?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -48,7 +48,7 @@ export const Benefits = () => {
               className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
             >
               <div className="mb-6">{benefit.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              <h3 className="font-poppins text-xl font-semibold text-gray-900 mb-4">
                 {benefit.title}
               </h3>
               <p className="text-gray-600">{benefit.description}</p>

@@ -14,13 +14,13 @@ export const Header = () => {
                 alt="Logo azul"
               />
 
-              <span className="hidden sm:block text-lg sm:text-xl font-bold text-gray-900 font-montserrat">
+              <span className="hidden sm:block text-lg sm:text-xl font-bold text-gray-900 ">
                 Assessoria do Bem
               </span>
             </div>
           </div>
           <div className="hidden lg:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-baseline space-x-4 font-poppins">
               <a
                 href="#como-funciona"
                 className="text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium"
@@ -50,7 +50,7 @@ export const Header = () => {
           <div className="flex items-center">
             <a
               href="#contato"
-              className="bg-app-blue text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-app-blue-light transition-colors"
+              className="font-poppins bg-app-blue text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-app-blue-light transition-colors"
             >
               Análise Gratuita
             </a>
