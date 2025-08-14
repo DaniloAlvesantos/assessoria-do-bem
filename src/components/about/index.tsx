@@ -1,17 +1,53 @@
 import { Globe, Check, TrendingUp, DollarSign, Zap } from "lucide-react";
+import { motion, Variants } from "framer-motion";
 
 export const About = () => {
+  const titleVariant: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1 },
+    },
+    visibleDelay: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 0.2 },
+    },
+  };
+
+  const cardVariant = (delay: number): Variants => ({
+    hidden: { opacity: 0, x: 30 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 1, delay },
+    },
+  });
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-poppins font-bold text-gray-900 mb-4">
+          <motion.h2
+            variants={titleVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.6 }}
+            className="text-4xl font-poppins font-bold text-gray-900 mb-4"
+          >
             O que é a Lei do Bem?
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p
+            variants={titleVariant}
+            initial="hidden"
+            whileInView="visibleDelay"
+            viewport={{ once: true, amount: 0.6 }}
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+          >
             A Lei do Bem é o principal instrumento de estímulo às atividades de
             Pesquisa, Desenvolvimento e Inovação Tecnológica (PD&I) no Brasil.
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -52,7 +88,13 @@ export const About = () => {
           </div>
 
           <div className="space-y-6">
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+            <motion.div
+              variants={cardVariant(0)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.6 }}
+              className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+            >
               <div className="flex items-center space-x-4 mb-4">
                 <div className="size-12 aspect-square bg-blue-100 rounded-full flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-blue-600" />
@@ -66,9 +108,15 @@ export const About = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+            <motion.div
+              variants={cardVariant(0.2)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.6 }}
+              className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+            >
               <div className="flex items-center space-x-4 mb-4">
                 <div className="size-12 aspect-square bg-green-100 rounded-full flex items-center justify-center">
                   <DollarSign className="w-6 h-6 text-green-600" />
@@ -82,9 +130,15 @@ export const About = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+            <motion.div
+              variants={cardVariant(0.4)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.6 }}
+              className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+            >
               <div className="flex items-center space-x-4 mb-4">
                 <div className="size-12 aspect-square bg-purple-100 rounded-full flex items-center justify-center">
                   <Zap className="w-6 h-6 text-purple-600" />
@@ -98,7 +152,7 @@ export const About = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
