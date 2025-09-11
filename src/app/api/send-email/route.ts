@@ -5,23 +5,13 @@ import {
 import { NextResponse, type NextRequest } from "next/server";
 import Nodemailer, { SendMailOptions } from "nodemailer";
 
-// const transporter = Nodemailer.createTransport({
-//   host: "smtp.office365.com",
-//   port: 587,
-//   secure: false,
-//   auth: {
-//     user: "marketing@assessoriadobem.com.br",
-//     pass: "M@rketing#2025",
-//   },
-// });
-
 const transporter = Nodemailer.createTransport({
   service: "gmail",
   host: "smtp.gmail.com",
   port: 587,
   auth: {
-    user: "daniloasan.itapira@gmail.com",
-    pass: "whlc cfwa dpws trwd",
+    user: "noreply.assessoriadobem@gmail.com",
+    pass: "nqkh xtyn jldc xqzz",
   },
 });
 
@@ -356,8 +346,8 @@ export async function POST(request: NextRequest) {
   });
 
   const mailOptions: SendMailOptions = {
-    from: "daniloasan.itapira@gmail.com",
-    to: "gustavobenegasmatos@gmail.com",
+    from: "noreply.assessoriadobem@gmail.com",
+    to: "daniloasan.itapira@gmail.com",
     subject: "Assessoria do bem - Diagnóstico",
     html: replacedHTML,
   };
