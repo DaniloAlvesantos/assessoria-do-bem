@@ -347,7 +347,7 @@ export async function POST(request: NextRequest) {
 
   const mailOptions: SendMailOptions = {
     from: "noreply.assessoriadobem@gmail.com",
-    to: "daniloasan.itapira@gmail.com",
+    to: "a.manduca@assessoriadobem.com.br",
     subject: "Assessoria do bem - Diagnóstico",
     html: replacedHTML,
   };
