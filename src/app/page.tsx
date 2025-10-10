@@ -12,6 +12,7 @@ import { Clients } from "@/components/clients";
 import { FAQ } from "@/components/FAQ";
 import { ContactForm } from "@/components/form";
 import Link from "next/link";
+import { trackButtonClick, trackWhatsAppClick } from "@/utils/gtm";
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="#contato"
+                onClick={() => trackButtonClick('analise_gratuita_cta', 'bottom_section')}
                 className="font-poppins bg-gradient-to-r from-app-blue to-app-blue-light text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-app-blue/80 hover:to-app-blue-light/80 transition-all"
               >
                 Fazer Análise Gratuita
@@ -48,6 +50,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://api.whatsapp.com/send?phone=5511992473916&text=Ol%C3%A1%20Anderson,%20tudo%20bem?%20Venho%20atrav%C3%A9s%20do%20site%20da%20*AdB!*"
+                onClick={() => trackWhatsAppClick('bottom_cta')}
                 className="font-poppins bg-app-yellow text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-app-yellow-soft transition-all flex items-center justify-center"
               >
                 <Phone className="w-5 h-5 mr-2" />

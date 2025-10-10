@@ -2,6 +2,7 @@ import { useState } from "react";
 import InputMask from "@mona-health/react-input-mask";
 import axios from "axios";
 import { toast, Toaster } from "sonner";
+import { trackFormSubmission, trackButtonClick, trackEvent } from "@/utils/gtm";
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -18,17 +19,43 @@ export const ContactForm = () => {
 
     if (Object.entries(formData).some((field) => field[1].trim().length < 0)) {
       console.error("Valor nulo");
+      return;
     }
-    
-    const res = axios.post("/api/send-email", formData);
-    toast.promise(res, {
-      loading:"Enviando...",
-      success: {
-        message: "Email enviado com sucesso!",
-        description: "Aguarde nossa equipe entrar em contato."
-      },
-      error: "Oops! Algo deu errado."
-    })
+
+    try {
+      // Track form submission START
+      trackEvent("form_start", {
+        form_name: "contact_form",
+        form_type: "diagnostico",
+      });
+
+      const res = await axios.post("/api/send-email", formData);
+
+      // Track successful submission
+      trackFormSubmission("contact_form", formData);
+
+      toast.success("Email enviado com sucesso!", {
+        description: "Aguarde nossa equipe entrar em contato.",
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        revenue: "",
+        message: "",
+        telefone: "",
+      });
+    } catch (error) {
+      // Track form error
+      trackEvent("form_error", {
+        form_name: "contact_form",
+        error: "submission_failed",
+      });
+
+      toast.error("Oops! Algo deu errado.");
+    }
   };
 
   const handleChange = (
@@ -41,6 +68,11 @@ export const ContactForm = () => {
       [e.target.name]: e.target.value,
     });
   };
+
+  const handleButtonClick = () => {
+    trackButtonClick("submit_form", "contact_section");
+  };
+
   return (
     <section
       id="contato"
@@ -194,6 +226,7 @@ export const ContactForm = () => {
             <div className="text-center">
               <button
                 type="submit"
+                onClick={handleButtonClick}
                 className="font-poppins bg-gradient-to-r from-app-blue to-app-blue-light text-white px-12 py-4 rounded-lg text-lg font-semibold hover:from-app-blue/90 hover:to-app-blue-light/90 transition-all transform hover:scale-105 shadow-lg"
               >
                 Quero Pagar Menos Impostos
